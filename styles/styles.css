@@ -1,0 +1,98 @@
+@import url(https://fonts.google.com/specimen/Kumbh+Sans:wght@400;700&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100vh;
+}
+
+body {
+  background: -webkit-linear-gradient(to bottom, #af67e9, #6565e7);
+  background: -moz-linear-gradient(to bottom, #af67e9, #6565e7);
+  background: -o-linear-gradient(to bottom, #af67e9, #6565e7);
+  background: linear-gradient(to bottom, #af67e9, #6565e7);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.container {
+  width: 80%;
+  margin-top: 18vh;
+  background: white;
+  border-radius: 25px;
+  padding: 25px;
+  overflow: visible;
+  position: relative;
+  box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.4);
+}
+
+#woman {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  width: 60%;
+  z-index: 10;
+}
+
+#pattern {
+  position: absolute;
+  width: 60%;
+  transform: translate(27%, -35%);
+}
+
+.content h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 10vh 0 4vh;
+}
+
+.accordian {
+  border-bottom: 2px solid #e7e7e9;
+}
+.accordian .title {
+  margin: 1.5vh 0;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.accordian .title img {
+  width: 15px;
+  position: relative;
+  right: 8px;
+  top: 2px;
+  transition: transform 200ms ease-in-out;
+  height: 10px;
+}
+.accordian .accord-content {
+  display: none;
+  color: #787887;
+  margin: 1vh 0;
+}
+.accordian.active .title {
+  font-weight: 700;
+  color: black !important;
+}
+.accordian.active .title img {
+  transform: rotate(180deg);
+}
+.accordian.active .accord-content {
+  display: block;
+}
+.accordian:last-child {
+  margin-bottom: 2vh;
+}
+
+/*# sourceMappingURL=styles.css.map */
