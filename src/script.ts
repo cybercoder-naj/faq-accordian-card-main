@@ -1,11 +1,15 @@
 const accordians = document.querySelectorAll<HTMLDivElement>(".accordian");
 
-accordians.forEach(accordian => {
+accordians.forEach((accordian: HTMLDivElement) => {
     accordian.addEventListener("click", function() {
-        accordians.forEach(element => {
+        if (this.classList.contains('active')) {
+            this.classList.remove('active')
+            return
+        }
+        
+        accordians.forEach((element: HTMLDivElement) => {
             element.classList.remove('active')
         })
-
         this.classList.add('active')
     })
 })
